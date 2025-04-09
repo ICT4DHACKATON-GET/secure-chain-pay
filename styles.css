@@ -1,0 +1,210 @@
+
+/* Main Styles for SecureChain Pay */
+
+/* Custom Variables */
+:root {
+    --primary: #4E44CE;
+    --primary-dark: #3a32a8;
+    --primary-light: #e8e6fa;
+    --primary-soft: rgba(78, 68, 206, 0.1);
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --dark: #212529;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --body-bg: #F5F7FB;
+    --body-color: #212529;
+    --border-color: #dee2e6;
+    --crypto-green: #00C853;
+    --crypto-red: #F44336;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--body-bg);
+    color: var(--body-color);
+}
+
+/* Custom Background */
+.bg-primary-soft {
+    background-color: var(--primary-soft);
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--white);
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Feature Cards */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon i {
+    font-size: 24px;
+}
+
+/* Stats Section */
+.stats-item {
+    padding: 1rem;
+}
+
+.counter {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Transaction Table */
+.transaction-table th {
+    font-weight: 600;
+}
+
+.status-completed {
+    color: var(--crypto-green);
+}
+
+.status-pending {
+    color: var(--warning);
+}
+
+.status-failed {
+    color: var(--crypto-red);
+}
+
+/* Dashboard Preview */
+.dashboard-preview {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dashboard-preview:hover .overlay-text {
+    opacity: 1;
+}
+
+/* Security Info Box */
+.security-info {
+    border-left: 4px solid var(--info);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(45deg, var(--primary-dark), var(--primary));
+}
+
+/* Footer */
+.footer {
+    background-color: #171723;
+}
+
+/* Additional Custom Classes */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .hero-section {
+        text-align: center;
+        padding: 3rem 0;
+        min-height: auto;
+    }
+    
+    .counter {
+        font-size: 1.5rem;
+    }
+    
+    .d-flex.gap-3 {
+        justify-content: center;
+    }
+}
+
+/* Special elements */
+.security-badges {
+    margin-bottom: 1.5rem;
+}
+
+.security-badges .badge {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    font-size: 0.85rem;
+}
