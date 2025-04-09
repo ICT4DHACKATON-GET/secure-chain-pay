@@ -1,5 +1,5 @@
 
-import { BlockchainInfo } from "@/components/BlockchainInfo";
+import BlockchainInfo from "@/components/BlockchainInfo";
 import TransactionHistory from "@/components/TransactionHistory";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
